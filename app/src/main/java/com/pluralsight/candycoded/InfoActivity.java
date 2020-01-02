@@ -19,6 +19,13 @@ public class InfoActivity extends AppCompatActivity {
             startActivity(mapIntent);
     }
 
+    public void createPhoneIntent(View view) {
+        Intent phoneIntent = new Intent(Intent.ACTION_DIAL);
+        Uri uri = Uri.parse("tel:0123456789");
+        phoneIntent.setData(uri);
+        startActivity(phoneIntent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +39,4 @@ public class InfoActivity extends AppCompatActivity {
 
 
     }
-
-    // ***
-    // TODO - Task 2 - Launch the Google Maps Activity
-    // ***
-
-    // ***
-    // TODO - Task 3 - Launch the Phone Activity
-    // ***
 }
